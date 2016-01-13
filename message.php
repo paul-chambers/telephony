@@ -50,8 +50,8 @@ echo '</Response>';
 $mail = new PHPMailer;
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->setFrom(  substr($from,1)."@".$messageHost, $fromName );
-$mail->addAddress( substr($to,1)."@".$messageHost, $toName );
+$mail->setFrom( $from."@".$messageHost, $fromName );
+$mail->addAddress( $to."@".$messageHost, $toName );
 
 $mail->Subject = "{$msgType} from {$fromName}";
 
